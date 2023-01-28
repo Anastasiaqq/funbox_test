@@ -1,0 +1,203 @@
+:root{
+    --bd-color: #1698d9;
+}
+.selected-border {
+    /* border: 7px solid #d91667 */
+    --bd-color: #d91667
+}
+/* :root.selected-border{
+    --bd-color:#d91667;
+} */
+@font-face {
+    font-family: "Exo 2.0";
+    src: url("../fonts/Exo2.0-Thin.otf") format("otf"),
+}
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url("../fonts/trebuchetms.ttf") format("ttf"),
+}
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;700&family=Work+Sans:wght@400;500;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.shop {
+    align-self: center;
+    width: 100%;
+}
+.shop__container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+.shop__header {
+    margin-bottom: 59px;
+    font-family: 'Exo 2.0', 'Exo 2', Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 1px #000000;
+}
+.shop__goods {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 95%;
+}
+
+.item__card {
+    box-sizing: border-box;
+    position: relative;
+    padding-top:10px;
+    height: 446px;
+    width: 320px;
+    border: 7px solid var(--bd-color);
+    border-top: none;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background: #f2f2f2;
+}
+  
+.item__card::before {
+    position: absolute;
+    top: -54px;
+    left: -27px;
+    content: '';
+    width: 44px;
+    height: 50px;
+    transform: rotate(45deg);
+    background: transparent;
+    border-right: 7px solid var(--bd-color);
+    z-index: 1;
+}
+.border {
+    position: absolute;
+    height: 33px;
+    width: 278px;
+    border-top: 5px solid var(--bd-color);
+    border-right: 7px solid var(--bd-color);
+    top: -34px;
+    left: 29px;
+    border-top-right-radius: 11px;
+    background: #f2f2f2;
+  }
+.border::before{
+    position: absolute;
+    top: 10px;
+    left: -19px;
+    width: 0;
+    height: 0;
+    content: '';
+    transform: rotate(45deg);
+    border: 20px solid transparent;
+    border-left: 20px solid #f2f2f2;
+}
+.item__container {
+    position: absolute;
+    margin-top: -22px;
+    margin-left: 40px;
+    z-index: 3;
+}
+.item__slogan {
+    /* position: absolute; */
+    color: #666666;
+    font-weight: 200;
+    font-size: 16px;
+    /* margin-left: 40px; */
+    /* margin-top: -13px; */
+    /* z-index: 3; */
+}
+.item__head {
+    /* position: absolute; */
+    margin-top: 15px;
+    /* margin-left: 40px; */
+    color:#000000;
+    font-weight: 600;
+    font-size: 51px;
+}
+.item__contents {
+    /* position: absolute; */
+    margin-top: 4px;
+    /* margin-left: 40px; */
+    font-size: 24px;
+    font-weight: 700;
+    color:#000000
+}
+.item__presents_list {
+    /* position: absolute; */
+    margin-top: 16px;
+    /* margin-top: 23px; */
+    font-weight: 13px;
+    color: #666666;
+    list-style-type: none;
+}
+.item__img {
+    position: absolute;
+    bottom: -7px;
+    left: -12px;
+    border-radius: 20px;
+}
+.item__desc {
+    margin-top: 15px;
+    width: 320px;
+    font-size: 13px;
+    text-align: center;
+}
+.item__weight {
+    position: absolute;
+    width: 81px;
+    height: 81px;
+    background-color: var(--bd-color);
+    bottom: 14px;
+    right: 34px;
+    border-radius: 50%;
+}
+.number {
+    width: 57px;
+    margin-left: 11px;
+    margin-top: 8px;
+    font-size: 41px;
+    text-align: center;
+}
+.kilo {
+    width: 57px;
+    margin-left: 11px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.buy {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+    cursor: pointer;
+}
+.noevent {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .item {
+        margin-bottom: 80px;
+    }
+    .item:last-of-type {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .shop__goods {
+        width: min-content;
+    }
+}
