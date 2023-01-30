@@ -2,12 +2,11 @@
     --bd-color: #1698d9;
 }
 .selected-border {
-    /* border: 7px solid #d91667 */
     --bd-color: #d91667
 }
-/* :root.selected-border{
-    --bd-color:#d91667;
-} */
+.inactive {
+    --bd-color: gray;
+}
 @font-face {
     font-family: "Exo 2.0";
     src: url("../fonts/Exo2.0-Thin.otf") format("otf"),
@@ -35,6 +34,8 @@ body {
     display: flex;
     width: 100vw;
     min-height: 100vh;
+    background: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%, #000000 100%);
+    background-image: url('../img/Pattern.png');
 }
 .shop__header {
     margin-bottom: 59px;
@@ -109,41 +110,31 @@ body {
     z-index: 3;
 }
 .item__slogan {
-    /* position: absolute; */
     color: #666666;
     font-weight: 200;
     font-size: 16px;
-    /* margin-left: 40px; */
-    /* margin-top: -13px; */
-    /* z-index: 3; */
 }
 .item__head {
-    /* position: absolute; */
     margin-top: 15px;
-    /* margin-left: 40px; */
     color:#000000;
     font-weight: 600;
     font-size: 51px;
 }
 .item__contents {
-    /* position: absolute; */
     margin-top: 4px;
-    /* margin-left: 40px; */
     font-size: 24px;
     font-weight: 700;
     color:#000000
 }
 .item__presents_list {
-    /* position: absolute; */
     margin-top: 16px;
-    /* margin-top: 23px; */
     font-weight: 13px;
     color: #666666;
     list-style-type: none;
 }
 .item__img {
     position: absolute;
-    bottom: -7px;
+    bottom: -6px;
     left: -12px;
     border-radius: 20px;
 }
